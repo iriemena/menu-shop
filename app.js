@@ -311,33 +311,29 @@ function displayMenu(menuItem) {
   menu.innerHTML = menuFilter;
 }
 
-
 // ****Mode toggle***
-let btn = document.querySelector('.switch');
-let header = document.getElementsByTagName('h4');
-let title = document.querySelector('.title')
+let btn = document.querySelector(".switch");
+let header = document.getElementsByTagName("h4");
+let title = document.querySelector(".title");
 
-console.log(header)
+console.log(header);
 
-    btn.addEventListener('click', function(e){
-        if(!btn.classList.contains('slide')){
-            btn.classList.add('slide')
-            document.body.style.background = '#000'
-             document.body.style.color = '#f4f4f4'
-             Array.from(header).forEach(function(item){
-              item.style.color = '#ff0000de'
-              title.style.background = 'rgb(0,0,0)'
-             })
-            
-           
-        }else{
-            btn.classList.remove('slide')
-            document.body.style.background = ''
-             document.body.style.color = ''
-             Array.from(header).forEach(function(item){
-              item.style.color = ''
-              title.style.background = ''
-             })
-        }
-      
-    })
+btn.addEventListener("click", function (e) {
+  if (!btn.classList.contains("slide")) {
+    btn.classList.add("slide");
+    document.body.style.background = "#000";
+    document.body.style.color = "#f4f4f4";
+    Array.from(header).forEach(function (item) {
+      item.style.color = "#ff0000de";
+      title.style.background = "rgb(0,0,0)";
+    });
+  } else {
+    btn.classList.remove("slide");
+    document.body.style.background = "";
+    document.body.style.color = "";
+    Array.from(header).forEach(function (item) {
+      item.style.color = "";
+      title.style.background = "";
+    });
+  }
+});
