@@ -1,0 +1,133 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.title {
+  font-weight: 400;
+  font-size: 2rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  margin: 0;
+}
+.underline {
+  height: 2px;
+  width: 10%;
+  background-color: red;
+  align-self: center;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 5fr;
+}
+.menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 70px;
+  text-align: justify;
+}
+
+hr {
+  width: 90%;
+  margin: auto;
+}
+
+.text {
+  margin: 0 30px;
+  text-align: justify;
+}
+
+header {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  color: rgb(45, 105, 193);
+}
+
+img {
+  border-radius: 10%;
+  transition: border-radius ease-out 1s;
+}
+
+img:hover {
+  border-radius: 8%;
+}
+
+.photo {
+  width: 300px;
+  height: 200px;
+  box-shadow: 6px 6px 5px rgb(0, 0, 0, 0.3);
+}
+
+.button {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.btn {
+  margin-left: 5px;
+  padding: 5px;
+  width: 15%;
+  text-transform: uppercase;
+  text-align: center;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  color: rgb(45, 105, 193);
+  background-color: #ccc;
+}
+.btn:hover {
+  color: #f4f4f4;
+  background-color: rgb(58, 55, 119);
+}
+
+@media screen and (min-width: 900px) {
+  .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 30px;
+    margin: 0 20px;
+  }
+  .menu {
+    display: grid;
+    grid-template-areas: "photo head";
+    margin-top: 10px;
+  }
+
+  img {
+    border-radius: 20%;
+  }
+  .photo {
+    grid-area: photo;
+    width: 200px;
+    height: 200px;
+  }
+  .header {
+    grid-area: head;
+    margin: 10px;
+  }
+  .title {
+    font-size: 2.5rem;
+  }
+  .text {
+    margin: 10px;
+  }
+  .btn {
+    margin-left: 10px;
+    padding: 5px;
+    width: 14%;
+    font-size: 1.1rem;
+  }
+}
