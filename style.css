@@ -16,6 +16,12 @@ body {
   flex-direction: column;
   padding: 0;
   margin: 0;
+  position: sticky;
+  top: 0;
+  background-color: #379;
+  padding-bottom: 5px;
+  padding-top: 0 
+
 }
 .underline {
   height: 2px;
@@ -35,6 +41,7 @@ body {
   align-items: center;
   margin-top: 70px;
   text-align: justify;
+
 }
 
 hr {
@@ -93,6 +100,37 @@ img:hover {
   background-color: rgb(58, 55, 119);
 }
 
+  .switch{
+    position: fixed;
+    top: 10px;
+    right: 5px;
+    width: 20%;
+    height: 5%;
+    border-radius: 20px;
+    outline: none;
+    background: url('./images/day.png') left center no-repeat , 
+    url('./images/night.png') right no-repeat ;
+    background-size: contain;
+    background-color: black;
+    box-shadow: 6px 6px 10px rgb(255, 255, 255, 0.5);
+
+  }
+ 
+  .toggle{
+    height: 100%;
+    width: 50%;
+    background-color: #f4f4f4;
+    position: absolute;
+    top: 0;
+    right: 0;
+    border-radius: 20px;
+  }
+  
+  .slide .toggle{
+    left: 0;
+
+  }
+  
 @media screen and (min-width: 900px) {
   .container {
     display: grid;
@@ -130,4 +168,10 @@ img:hover {
     width: 14%;
     font-size: 1.1rem;
   }
+
+   .switch{
+    width: 7%;
+    right: 50px;
+  }
+ 
 }
